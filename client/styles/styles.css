@@ -88,3 +88,11 @@ form input[type=text] {
     background-color: #0090da;
 }
 
+#newroom {
+    margin-right: 10px;
+    width: 70%;
+    font-size: 12px;
+    padding: 5px;
+    border: black;
+}
+
