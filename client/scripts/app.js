@@ -20,6 +20,7 @@ var App = {
     App.fetch(App.stopSpinner);
     // TODO: Make sure the app loads data from the API
     // continually, instead of just once at the start.
+    setTimeout(App.fetch, 5000);
   },
 
   fetch: function(callback = ()=>{}) {
@@ -31,11 +32,6 @@ var App = {
       MessagesView.render();
       Rooms.setData();
       RoomsView.render();
-
-      RoomsView.handleClick('click');
-      //RoomsView.renderAddRoomSpace();
-
-
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
     });
