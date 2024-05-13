@@ -26,6 +26,8 @@ var MessagesView = {
     var $msg = $('<div class="message"></div>');
     var $msgName = $('<div class="username">' + message.username + '</div>');
     var $msgText = $('<div class="messagetext">' + message.text + '</div>');
+    $msgName = $('<div class="username">' + $msgName.text() + '</div>');
+    $msgText = $('<div class="messagetext">' + $msgText.text() + '</div>');
     $msg.appendTo(MessagesView.$chats);
     $msgName.appendTo($msg);
     $msgText.appendTo($msg);

@@ -27,6 +27,7 @@ var RoomsView = {
     RoomsView['$select'].attr('name', 'roomview');
     RoomsView['$select'].attr('id', 'room-names');
     var $room = $('<option>' + roomname + '</option>');
+    $room = $('<option>' + $room.text() + '</option>'); // for escaping xss attack
     $room.attr('value', roomname);
     $room.appendTo(RoomsView.$select);
   },

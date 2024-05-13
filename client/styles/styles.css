@@ -96,3 +96,10 @@ form input[type=text] {
     border: black;
 }
 
+.message {
+    margin-top: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
