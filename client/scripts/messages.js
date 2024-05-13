@@ -29,15 +29,23 @@ var Messages = {
     return msgs;
   },
 
+  filteredMsgs: function() {
+    var msgs = Messages.msgDetails();
+    var filteredmsgs = [];
+    for (var j = 0; j < msgs.length; j++) {
+      if (msgs[j].roomname === RoomsView['$select'].val()) {
+        filteredmsgs.push(msgs[j]);
+      }
+    }
+    return filteredmsgs;
+  },
+
   createNewMessage: function(userName, text, roomname) {
     return {username: userName,
       text: text,
       roomname: roomname
     };
   }
-
-
-
   // TODO: Define methods which allow you to retrieve from,
   // add to, and generally interact with the messages.
 

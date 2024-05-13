@@ -17,7 +17,7 @@ var FormView = {
     // Make this function actually send a message to the Parse API.
     var message = $('#message').val();
     var roomname = $('#room-names').val();
-    var username = App.username.slice(10);
+    var username = App.username;
     var newMessage = Messages.createNewMessage(username, message, roomname);
     Parse.create(newMessage);
     this.reset();

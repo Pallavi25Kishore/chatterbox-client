@@ -10,6 +10,7 @@ var RoomsView = {
     // TODO: Perform any work which needs to be done
     // when this view loads.
     RoomsView['$button'].on('click', RoomsView.handleClick);
+    RoomsView['$select'].on('change', Rooms.markSelected);
   },
 
   render: function() {
@@ -37,7 +38,6 @@ var RoomsView = {
 
   handleClick: function(event) {
     var newroom = prompt('Enter new room');
-    console.log('new', newroom);
     if (newroom) {
       if (_.indexOf(Rooms['_data'], newroom) === -1) {
         Rooms.add(newroom);

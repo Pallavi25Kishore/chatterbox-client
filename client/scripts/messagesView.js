@@ -15,7 +15,7 @@ var MessagesView = {
   render: function() {
     // TODO: Render _all_ the messages.
     MessagesView['$chats'].html('');
-    var messages = Messages.msgDetails(); // returns array of objs with msg text and names
+    var messages = Messages.filteredMsgs(); // returns array of objs with msg text names and rooms
     for (var i = 0; i < messages.length; i++) {
       MessagesView.renderMessage(messages[i]);
     }
@@ -29,6 +29,10 @@ var MessagesView = {
     $msg.appendTo(MessagesView.$chats);
     $msgName.appendTo($msg);
     $msgText.appendTo($msg);
+    if (_.indexOf(Friends['_data'], message.username) !== -1) {
+      $msgName.css('font-weight', 'bold');
+      $msgText.css('font-weight', 'bold');
+    }
     // TODO: Render a single message.
   },
 

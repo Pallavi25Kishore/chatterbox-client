@@ -8,6 +8,7 @@ var Rooms = {
   _data: [],
 
   setData: function() {
+    Rooms['_data'] = [];
     var set = new Set();
     var msgs = Messages.msgDetails();
     for (var i = 0; i < msgs.length; i++) {
@@ -21,9 +22,11 @@ var Rooms = {
   add: function(str) {
     Rooms['_data'].push(str);
     RoomsView.render();
+  },
+
+  markSelected: function(event) {
+    MessagesView.render();
   }
-
-
   // TODO: Define methods which allow you to add rooms, update the list,
   // mark a room as selected, etc.
 

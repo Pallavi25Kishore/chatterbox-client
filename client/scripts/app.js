@@ -29,9 +29,9 @@ var App = {
       callback();
       console.log(data);
       Messages.setData(data);
-      MessagesView.render();
       Rooms.setData();
       RoomsView.render();
+      MessagesView.render();
       // TODO: Use the data to update Messages and Rooms
       // and re-render the corresponding views.
     });

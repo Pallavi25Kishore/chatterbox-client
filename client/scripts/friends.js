@@ -14,6 +14,7 @@ var Friends = {
     } else {
       Friends['_data'].splice(index, 1);
     }
+    MessagesView.render();
   },
   // TODO: Define methods which allow you to add, toggle,
   // and check the friendship status of other users.
